@@ -1,0 +1,115 @@
+/*Swiper*/
+
+.swiper-container {
+    width: 100%;
+    height: 95vh;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets {
+    padding-bottom: 20px;
+    @include media-breakpoint-down(sm) {
+        padding-bottom: 34px;
+    }
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.main-slider .slider-bg-position {
+    background-size: cover!important;
+    background-position: center center!important;
+}
+
+.main-slider .swiper-button-prev,
+.main-slider .swiper-button-next {
+    background-image: none!important;
+    color: #fff;
+    width: 50px;
+    height: 50px; // border: 1px solid #fff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+}
+
+.main-slider h2 {
+    color: #fff;
+    font-size: 54px;
+    line-height: 59px;
+    padding: 0 19%;
+    text-transform: uppercase;
+}
+
+.main-slider .swiper-pagination-bullet {
+    width: 9px;
+    height: 9px;
+    background: rgba(255, 255, 255, 0.9);
+    @include media-breakpoint-up(sm) {
+        width: 13px;
+        height: 13px;
+    }
+}
+
+.main-slider .swiper-pagination-bullet-active {
+    background: #fff;
+}
+
+.content-body {}
+
+.countdown {
+    position: absolute;
+    z-index: 99999;
+    top: 150px;
+    right: 250px;
+    text-align: right;
+    p {
+        line-height: 0;
+    }
+    #timer.timer {
+        font-size: 27px;
+    }
+}
+
+// .top {
+//     padding-top: 225px;
+// }
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300);
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.timer {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 100;
+    opacity: 0;
+    transition: opacity .3s ease;
+    &__section {
+        display: inline-block;
+        text-align: center;
+        margin: 0 10px;
+    }
+    &__number {
+        font-weight: 300;
+    }
+    &__label {
+        font-size: .5em;
+    }
+}

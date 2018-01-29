@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{title}}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}" type="text/css">
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Indie+Flower|Lobster|Lovers+Quarrel|Parisienne|Playfair+Display|Shadows+Into+Light|VT323');
+    </style>
+  </head>
+
+  <body>
+    {% block content %}
+    <!-- content goes here -->
+    {% endblock %}
+
+
+
+    <audio id="audioplayer" controls>
+      <!-- Remove the "Controls" Attrebute if you dont want the visual controls -->
+    </audio>
+
+    <style media="screen">
+      .player {
+        position: absolute;
+        bottom: 0;
+        z-index: 99999;
+      }
+
+      footer {
+        position: absolute;
+        z-index: 9999999999;
+        width: 97%;
+        padding: 3px 0;
+        color: #454545;
+        right: 5px;
+
+      }
+
+      footer a {
+        color: #cc0000;
+      }
+    </style>
+    <script>
+
+      window.setTimeout(function () {
+        $('#audioplayer').addClass("player");
+
+      }, 15000);
+
+    </script>
+
+    <script>
+
+      var lastSong = null;
+      var selection = null;
+      var playlist = [
+        "/static/images/0.mp3",
+        "/static/images/1.mp3",
+        "/static/images/2.mp3",
+        "/static/images/3.mp3",
+
+        //"http://tooxclusive.com/wp-content/uploads/2016/05/Solidstar-ft.-Patoranking-x-Tiwa-Savage-Wait-Refix.mp3"
+      ]; // List of Songs
+      var player = document.getElementById("audioplayer"); // Get Audio Element
+      player.autoplay = true;
+      player.addEventListener("ended", selectRandom); // Run function when song ends
+      player.volume = 0.5;
+
+      function selectRandom() {
+        while (selection == lastSong) { // Repeat until different song is selected
+          selection = Math.floor(Math.random() * playlist.length);
+        }
+        lastSong = selection; // Remember last song
+        player.src = playlist[selection]; // Tell HTML the location of the new Song
+
+      }
+
+      selectRandom(); // Select initial song
+      player.play(); // Start Song
+
+
+      $(window).ready(function () {
+        setInterval(function () {
+          $("audio").addClass("player")
+        }, 15000);
+
+      });
+
+    </script>
+
+    <script src="{% static 'scripts/jquery.js' %}">
+    </script>
+    <script src="{% static 'scripts/main.js' %}">
+    </script>
+  </body>
+
+</html>
