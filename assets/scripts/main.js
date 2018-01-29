@@ -122,7 +122,7 @@
 				timer.countdownDate = new Date();
 
 				// set date to 10 days in the future for testing purposes
-				timer.countdownDate.setDate(timer.countdownDate.getDate() + 12.5);
+				timer.countdownDate.setDate(timer.countdownDate.getDate() + 13);
 
 				/*
 				* Get thing started

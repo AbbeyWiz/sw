@@ -25,8 +25,8 @@ SECRET_KEY = '#=9udds*5ykzt6v$@q#x87r0!!eoe6@ef0ep&)435t*rrt_^%#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["olaoluwaseun.com", "www.olaoluwaseun.com"]
-
+# ALLOWED_HOSTS = ["olaoluwaseun.com", "www.olaoluwaseun.com", "localhost:8000"]
+ALLOWED_HOSTS = []
 
 # Application definition
 
