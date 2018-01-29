@@ -22,9 +22,13 @@ from django.conf import settings
 urlpatterns = [
     path('', views.home, name='home'),
 
-    path('events/', views.events, name='events'),
+    path('events', views.events, name='events'),
 
-    path('couple/', views.couple, name='couple'),
-    
-    path('admin/', admin.site.urls),   
+    path('gallery', views.gallery, name='gallery'),
+
+    path('people', views.people, name='people'),
+
+    path('wishes', views.wishes, name='wishes'),
+
+    path('admin/', admin.site.urls),
 ]
