@@ -113,3 +113,132 @@ body {
         font-size: .5em;
     }
 }
+
+
+
+
+
+/************
+ Events
+************/
+.event{
+
+    padding-bottom: 100px;
+    
+     h4{
+            font-weight:lighter !important;
+            padding-right:10px;
+            padding-left:10px;
+            padding: 20px 10px 120px;
+
+        }
+
+    &-boxes{
+        position: relative;
+        overflow: hidden;
+        border: 4px solid #ededed;
+
+        .right-half, .left-half{
+            background-color: #ededed;
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 100;
+            &.animated{
+                animation-duration: 4s;
+            }
+        }
+        .clip{
+            background-color: #867936;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border: 2px solid #615828;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -o-border-radius: 50%;
+            -ms-border-radius: 50%;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            z-index: 101;
+        }
+
+        .clip-fade-out{
+            -webkit-animation: clip-fade-out 1s 0.5s alternate forwards;
+            animation: clip-fade-out 1s 0.5s alternate forwards;
+        }
+    }
+    &-box-inner{        
+        background: #fff url(../images/event-box-bg.png);
+        padding: 25px;
+        position: relative;
+        .main-ceromony, .engagement{
+            padding-bottom:15px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #000;
+            
+
+        }
+
+       
+        h3{
+                font-size: 16px;
+                font-weight: bold;
+                color: #c00;
+                margin: 0 0 1em;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-family: 'Playfair Display', cursive; 
+
+            }
+
+            ul{
+                position: relative;
+                z-index: 10;
+                li{
+                    font-size: 14px;
+                    color: #505050;
+                    margin-bottom: 10px;
+                    text-transform: capitalize;
+                    position: relative;
+                    i{
+                        display: inline-block;
+                        padding-right: 8px;
+                        
+                        left: 0;
+                        top: 2px;
+                    }
+                }
+            }
+        }
+    .map{
+        height: 424px;
+        border: 4px solid #ededed;
+    }
+}
+
+
+
+#map_container {
+    position: relative;
+    padding-top: 78.665%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#map {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+    

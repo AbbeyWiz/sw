@@ -4,15 +4,27 @@ from django.shortcuts import render
 
 
 homepage = {
+  'class': 'homeheader',
   'male': 'Wale',
   'female': 'Seun',
-  'title': 'OlaOluwaseun'
+  'title': 'OlaOluwaseun',
+
+
 
 }
 
 eventpage = {
-    
-  'title2': 'OlaOluwaseun | Events'
+  'title': 'OlaOluwaseun | Events',
+  'male': 'Wale',
+  'female': 'Seun'
+}
+
+
+gallerypage = {
+  'title': 'OlaOluwaseun | Gallery',
+  'class': 'gallery',
+  'male': 'Wale',
+  'female': 'Seun'
 }
 
 
@@ -21,11 +33,11 @@ def home(request):
 
 
 def events(request):
-  return render(request, 'events.html')
+  return render(request, 'events.html', eventpage)
 
 
 def gallery(request):
-  return render(request, 'gallery.html')
+  return render(request, 'gallery.html', gallerypage)
 
 
 def people(request):
