@@ -8,20 +8,17 @@ homepage = {
   'male': 'Wale',
   'female': 'Seun',
   'title': 'OlaOluwaseun',
-
-
-
 }
 
 eventpage = {
-  'title': 'OlaOluwaseun | Events',
+  'title': 'Events & Programmes',
   'male': 'Wale',
   'female': 'Seun'
 }
 
 
 gallerypage = {
-  'title': 'OlaOluwaseun | Gallery',
+  'title': 'Gallery',
   'class': 'gallery',
   'male': 'Wale',
   'female': 'Seun'
