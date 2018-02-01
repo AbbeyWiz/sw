@@ -48,6 +48,7 @@ def wishes(request):
 
 
 def gallery(request):
+  # path="/var/www/sw/sw/static/images/gallery/"
     path="/Users/AbbeyLashly/Sites/sw/sw/static/images/gallery/" # insert the path to your directory   
     img_list =os.listdir(path)   
     return render(request, 'gallery.html', {'title': 'Photo Gallery',
