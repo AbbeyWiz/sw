@@ -1,4 +1,5 @@
 {% extends 'partials/layout.html' %}
+{% load static %}
 
 
 {% block content %}
@@ -6,59 +7,28 @@
 
 
 
-    <div class="container event mt-sm-4">
-            <h4 class="text-right mb-4">Events & Programmes</h4>
+    <div class="container event gallery mt-sm-4">
+        <h4 class="text-right mb-4">{{title}}</h4>
         <div class="row">
-
-            <div class="col-24 col-md-12">
-                <div class="event-boxes">
-                    <div class="left-half animated slideOutLeft" style="left: 0px;"></div>
-                    <div class="right-half animated slideOutRight" style="right: 0px;"></div>
-                    
-                    <div class="event-box-inner">                        
-                        <div class="engagement">
-                            <h3>Engagement</h3>
-                            <ul>
-                                <li>
-                                    <i class="fa fa-calendar"></i> Monday, 21 June 2017 (8.00 AM - 10.00 AM)</li>
-                                <li>
-                                    <i class="fa fa-location-arrow"></i> Pa & Deaconess Lawson's Compound, Adeyeye Street, Aradagun Badagry.</li>
-                            </ul>
+            {% for image in images %}
+                    <div class="col-12 col-md-6">
+                        <div class="box " style="padding-bottom:30px">
+                            <a href="static/images/gallery/{{image}}" class="fancybox" data-fancybox-group="gallery">
+                                
+                                    <img src= "static/images/gallery/{{image}}" class="img-fluid">
+                               
+                                <div class="fade-icon">
+                                    <span class="icon"><i class="fa fa-search"></i></span>
+                                </div>
+                            </a>
                         </div>
-
-
-                        <div class="main-ceromony">
-                            <h3>Wedding ceremony</h3>
-                            <ul>
-                                <li>
-                                    <i class="fa fa-calendar"></i> Monday, 21 June 2017 (8.00 AM - 10.00 AM)</li>
-                                <li>
-                                    <i class="fa fa-location-arrow"></i> St Joseph Catholic Church, 9/10 Akin Phili Close, Off Whisphering Palms Road, Aradagun. Badagry</li>
-                            </ul>
-                        </div>
-                        <div class="reception">
-                            <h3>Reception party</h3>
-                            <ul>
-                                <li>
-                                    <i class="fa fa-calendar"></i> Monday, 21 June 2017 (8.00 AM - 10.00 AM)</li>
-                                <li>
-                                    <i class="fa fa-location-arrow"></i> Hunwaji Event Center, 27/29, Aholu Wawu Street, Agbonkanmeh, Badagry</li>
-                            </ul>
-                        </div>
-
                     </div>
-                </div>
-            </div>
-            <div class="col-24 col-md-12">                 
-                <div id="map_container">
-                    <div id="map" class="map"></div>
-                </div>
+             {% endfor %}
 
-                <script async defer
-                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9fLDmuaaSV3FN2eqzdmIqFQVj18f9MuE&callback=initMap">
-                </script>           
-            </div>
         </div>
+
+        
+
     </div>
     {% include 'partials/footer.html' %}
 

@@ -1,5 +1,6 @@
 from django.shortcuts import render
-
+from django.http import HttpResponse
+import os 
 
 
 
@@ -18,10 +19,7 @@ eventpage = {
 
 
 gallerypage = {
-  'title': 'Gallery',
-  'class': 'gallery',
-  'male': 'Wale',
-  'female': 'Seun'
+  
 }
 
 
@@ -43,3 +41,17 @@ def people(request):
 
 def wishes(request):
   return render(request, 'wishes.html')
+
+
+
+
+
+
+def gallery(request):
+    path="/Users/AbbeyLashly/Sites/sw/sw/static/images/gallery/" # insert the path to your directory   
+    img_list =os.listdir(path)   
+    return render(request, 'gallery.html', {'title': 'Photo Gallery',
+  'class': 'gallery',
+  'male': 'Wale',
+  'female': 'Seun','images': img_list})
+
